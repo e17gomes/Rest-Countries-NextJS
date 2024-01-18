@@ -1,21 +1,25 @@
-import React from "react"
+'use client'
+import React, { useContext } from "react"
+import { IoMoon } from "react-icons/io5";
 import { IoMoonOutline } from "react-icons/io5";
-import Input from './SearchBar'
+import { ThemeContext } from '@/app/context/contexts';
 function Header() {
-const darkmode = ()=>{
-  document.body
-}
+
+  const { theme, toggleTheme } = useContext(ThemeContext);
+  
+  
 
   return (
- 
-    <div className="items-center shadow-md  py-4 ">
-      <header className="md:flex justify-between container mx-auto py-4 items-center sm:grid p-10">
-        <h1 className="text-2xl font-bold">Where in the world?</h1>
-        <p className="font-semibold items-center flex cursor-pointer"><IoMoonOutline className="mr-2" /> Dark Mode</p>
-      </header>
+
+    <div className={`items-center shadow-md py-4 ${theme==='dark'?'bg-gray-700 text-white':null} `}>
       
-      </div>
-   
+      <header className={`md:flex justify-between container mx-auto py-4 items-center sm:flex flex row `} >
+        <h1 className={`text-2xl font-bold `}>Where in the world?</h1>
+        {theme==='dark'?<p onClick={toggleTheme} className="font-semibold items-center inline-block cursor-pointer"><IoMoon className="mr-2 inline-block" /> Dark Mode </p>:<p onClick={toggleTheme} className="font-semibold items-center inline-block cursor-pointer"><IoMoonOutline className="mr-2 inline-block" /> Dark Mode </p>}
+      </header>
+
+    </div>
+
   )
 }
 export default Header

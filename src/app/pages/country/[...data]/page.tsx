@@ -1,24 +1,36 @@
 'use client'
 import Header from "@/app/components/Header";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { CountryPage } from '@/app/types/CountryPage';
 import { api } from "@/app/api";
-import { useParams } from "next/navigation";
 import SingleCountry from "@/app/components/SingleCountry";
+import { ThemeContext } from '@/app/context/contexts';
 
-export default function CountryPage() {
-  const {name, code} = useParams()
 
+interface CountryPageProps {
+  params: {
+    data: string[]
+  }
+}
+
+export default function CountryPage({params}: CountryPageProps) {
+  const [name, code] = params.data
+  const { theme, toggleTheme } = useContext(ThemeContext);
   const [loading, setLoading] = useState(false);
   const [country, setCountry] = useState<CountryPage[]>([]);
 
   useEffect(
     ()=>{name?getCountry(name):getCountry(code)}
+
+    
   ,[name, code])
   
+ 
   const getCountry = async (params:string|string[]) => {
     setLoading(true)
+    
     let country 
+
     if (code) {
       country = await api.getCountryByCode(code as string);
     } else if (name) {
@@ -31,7 +43,7 @@ export default function CountryPage() {
 
 
   return (
-    <div>
+    <div className={` ${theme==='dark'?'bg-gray-800 text-white':null}`}>
       <Header />
       {!loading && country.map((item, index) => (
   <SingleCountry
@@ -47,7 +59,7 @@ export default function CountryPage() {
   borders={item.borders}
   currencies={item.currencies}
   code={item.code}
- 
+    
   />
 ))}
      
