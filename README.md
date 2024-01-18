@@ -21,3 +21,4 @@
 3. Execute `npm install` para instalar as dependências.
 4. Execute `npm run dev` para iniciar o servidor de desenvolvimento.
 5. Abra o navegador e acesse http://localhost:3000.
+
