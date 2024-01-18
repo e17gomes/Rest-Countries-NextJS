@@ -21,7 +21,7 @@ export default function SingleCountry({ languages, flags, name, population, regi
           
         <div className="flex flex-col justify-center gap-10 ">
             <h2 className="text-2xl font-bold">{name.common}</h2>
-            <div className="grid grid-cols-2">
+            <div className="grid sm:grid-cols-2 grid-cols-1">
             <p className="my-1"><span className="font-semibold">Native Name: </span>{native.official}</p>
             <p className="my-1"><span className="font-semibold">Top Level Domain: </span>{tld[0]}</p>
             
