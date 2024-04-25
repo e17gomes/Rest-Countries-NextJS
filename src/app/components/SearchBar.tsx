@@ -28,7 +28,7 @@ function swapFilter(e: string){
 
     return (
 
-        <div className={`py-10 lg:flex justify-between container mx-auto items-center ${theme==='dark'?'bg-gray-800 text-white':null}`}>
+        <div className={`py-10 flex justify-between container mx-auto items-center ${theme==='dark'?'bg-gray-800 text-white':null}`}>
             
             <IoSearch className=" absolute text-gray-400 ml-7 text-xl " />
             <input value={value} onChange={e=>setSearchTerm(e.target.value)} type="text" placeholder='Search for a country...' className={`py-4 px-24 shadow-md rounded text-sm outline-none ${theme==='dark'?'bg-gray-700 text-white':null}`} />
