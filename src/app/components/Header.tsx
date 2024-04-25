@@ -15,7 +15,7 @@ function Header() {
       
       <header className={`md:flex justify-between container mx-auto py-4 items-center sm:flex flex row `} >
         <h1 className={`text-2xl font-bold `}>Where in the world?</h1>
-        {theme==='dark'?<p onClick={toggleTheme} className="font-semibold items-center inline-block cursor-pointer"><IoMoon className="mr-2 inline-block" /> Dark Mode </p>:<p onClick={toggleTheme} className="font-semibold items-center inline-block cursor-pointer"><IoMoonOutline className="mr-2 inline-block" /> Dark Mode </p>}
+        {theme==='dark'?<p onClick={toggleTheme} className="font-semibold items-center inline-block cursor-pointer"><IoMoon className="mr-2 inline-block" /> Light Mode </p>:<p onClick={toggleTheme} className="font-semibold items-center inline-block cursor-pointer"><IoMoonOutline className="mr-2 inline-block" /> Dark Mode </p>}
       </header>
 
     </div>
