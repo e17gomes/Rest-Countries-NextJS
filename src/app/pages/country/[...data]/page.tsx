@@ -35,7 +35,7 @@ export default function CountryPage({params}: CountryPageProps) {
     if (code) {
       country = await api.getCountryByCode(code as string);
     } else if (name) {
-      console.log(code)
+      
       country = await api.getCountry(name);
     }
     setCountry(country)
