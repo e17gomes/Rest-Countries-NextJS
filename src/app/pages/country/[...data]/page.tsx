@@ -45,7 +45,6 @@ export default function CountryPage({params}: CountryPageProps) {
 
   return (
     <div className={` ${theme==='dark'?'bg-gray-800 text-white':null}`}>
-      <Header />
       {!loading && country.map((item, index) => (
   <SingleCountry
   key={index}
