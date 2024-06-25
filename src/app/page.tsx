@@ -3,7 +3,7 @@ import CardCountry from './components/Card'
 
 export default function Home(){
   return(
-    <div className='container' >
+    <div className='min-h-screen' >
   
    <CardCountry/>
      

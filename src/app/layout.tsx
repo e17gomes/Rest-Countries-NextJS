@@ -20,7 +20,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} min-h-screen`}>
       <Providers>
-        import Header from './components/Header'
         <Header />
           {children}
       </Providers>

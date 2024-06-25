@@ -4,6 +4,8 @@ import { CountryPage } from "../types/CountryPage";
 import { BsArrowLeft } from "react-icons/bs";
 import { ThemeContext } from "../context/contexts";
 import { useContext } from "react";
+import Image from "next/image";
+
 
 
 export default function SingleCountry({ languages, flags, name, population, region, capital, tld, subregion, borders, currencies, code }: CountryPage) {
@@ -12,12 +14,12 @@ export default function SingleCountry({ languages, flags, name, population, regi
     const { theme } = useContext(ThemeContext);
     return (
     
-        <div className={`  h-screen ${theme==='dark'?' bg-gray-800 cover text-white':null}`}>
-           <div className=' w-fit m-2'>
-           <Link href='/' className="shadow-gray-800 shadow-md flex items-center px-6 py-1 my-10 ml-10 rounded"> <BsArrowLeft/> Back</Link>
+        <div className={`  h-screen ${theme==='dark'?' bg-gray-800  text-white':null} py-2`}>
+           <div className=' w-fit '>
+           <Link href='/' className="shadow-gray-800 shadow border border-gray-600 flex items-center px-6 py-3  ml-10 rounded "> <BsArrowLeft/> </Link>
             </div> 
 <section className="grid sm:grid-cols-1 mx-10 m-5 md:grid-cols-2">
-            <img src={flags.svg} alt={`Bandeira de ${name.common}`} width={700} />
+            <Image src={flags.svg} alt={`Bandeira de ${name.common}`} width={700} height={600} />
           
         <div className="flex flex-col justify-center mt-5  ">
             <h2 className="text-2xl font-bold mb-5">{name.common}</h2>

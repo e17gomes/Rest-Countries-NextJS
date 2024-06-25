@@ -35,7 +35,7 @@ function swapFilter(e: string){
         
             {/* --------------------------------------- */}
             <select
-                    className={`ml-auto my-2 p-3 py-4 shadow-md rounded text-sm outline-none   ${theme==='dark'?'bg-gray-700 text-white':null}`}
+                    className={`ml-auto my-2  p-3 shadow-md rounded cursor-pointer text-sm outline-none   ${theme==='dark'?'bg-gray-700 text-white':null}`}
                     name="Fill"
                     value={filter}
                     onChange={(e) => swapFilter(e.target.value)}

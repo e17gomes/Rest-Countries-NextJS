@@ -11,7 +11,7 @@ function Header() {
 
   return (
 
-    <div className={`items-center shadow-md py-4 ${theme==='dark'?'bg-gray-700 text-white':null} `}>
+    <div className={`items-center shadow-md p-4 ${theme==='dark'?'bg-gray-700 text-white':null} `}>
       
       <header className={`md:flex justify-between container mx-auto py-4 items-center sm:flex flex row `} >
         <h1 className={`text-2xl font-bold `}>Where in the world?</h1>
