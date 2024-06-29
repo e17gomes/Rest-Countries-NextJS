@@ -8,10 +8,9 @@ const Footer = () => {
     const year =new Date()
     const currentYear = year.getFullYear()
   return (
-    <footer className={`${theme==='dark'?' bg-gray-800  text-white':null}  border`} >
-    <div className="container px-5 py-4 mx-auto flex items-center sm:flex-row flex-col">
-    {currentYear} 
-     
+    <footer className={`${theme==='dark'?' bg-gray-800 border-gray-600  text-white':null}  border-t text-center`} >
+    <div className="container text-center px-5 py-4 mx-auto flex items-center sm:flex-row flex-col">
+    © {currentYear}  Maded by Eduardo Gomes
     </div>
   </footer>
   )
