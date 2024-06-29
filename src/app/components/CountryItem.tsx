@@ -18,7 +18,7 @@ export const CountryItem = ({ name, population, region, capital, flag }: Country
         <Image
           className="rounded-sm h-[150px] w-full "
           src={`${flag}`}
-          alt={`Bandeira de ${name}`}
+          alt={`Flag of the ${name}`}
           width={150}
         height={150}
         />
@@ -26,9 +26,9 @@ export const CountryItem = ({ name, population, region, capital, flag }: Country
         <section className="m-5">
           <p className="text-lg font-semibold text-md pb-3 line-clamp-1">
           {name.common}          </p>
-          <p className="font-semibold text-sm">Population: <span className="font-normal">{population}</span></p>
-          <p className="font-semibold text-sm">Region: <span className="font-normal">{region}</span></p>
-          <p className="font-semibold text-sm ">Capital: <span className="font-normal">{capital}</span></p>
+          <p className="font-semibold text-sm line-clamp-1">Population: <span className="font-normal">{population}</span></p>
+          <p className="font-semibold text-sm line-clamp-1">Region: <span className="font-normal">{region}</span></p>
+          <p className="font-semibold text-sm line-clamp-1 ">Capital: <span className="font-normal">{capital}</span></p>
         </section>
       </div>
     </Link>

@@ -30,7 +30,7 @@ export default function SingleCountry({ languages, flags, name, population, regi
             
             <p className="my-1"><span className="font-semibold">Subregion: </span>{subregion}</p>
             <p className="my-1"><span className="font-semibold">Capital: </span>{capital}</p>
-            <br />
+            
             <p className="my-1"><span className="font-semibold  ">Top Level Domain: </span>{tld[0]}</p>
             
             <p className="my-1"><span className="font-semibold">Currencies: </span>{currencie.name}</p>

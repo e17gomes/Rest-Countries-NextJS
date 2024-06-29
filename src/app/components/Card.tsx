@@ -88,10 +88,11 @@ const CardCountry = () => {
             capital={item.capital}
             flag={item.flags.png}
           />
-        ))}
+          
+        )) }
       </div>
-
-      {/* Componente para exibir os botões de paginação */}
+      {!loading && <article className="p-2">      
+         {/* Componente para exibir os botões de paginação */}
     
     <section className={` flex gap-5  ${theme === 'dark' ? 'bg-gray-700 text-white' : 'bg-neutral-200'} m-auto w-fit rounded-full items-center select-none`}>
     <button onClick={() => paginate(currentPage - 1)} disabled={currentPage===1} className="p-2 px-4 rounded-full transition-colors ease-in-out active:bg-black"><BsArrowLeft/></button>
@@ -99,6 +100,8 @@ const CardCountry = () => {
     <button onClick={() => paginate(currentPage + 1)} className="active:bg-black p-2 px-4 rounded-full transition-colors ease-in-out"><BsArrowRight/></button>
   
     </section>
+    </article>}  
+
           
       
     </div>
