@@ -57,6 +57,8 @@ const CardCountry = () => {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = countriesFilter.slice(indexOfFirstItem, indexOfLastItem);
+  const totalPages = Math.ceil(countriesFilter.length / itemsPerPage);
+
 
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
@@ -97,7 +99,7 @@ const CardCountry = () => {
     <section className={` flex gap-5  ${theme === 'dark' ? 'bg-gray-700 text-white' : 'bg-neutral-200'} m-auto w-fit rounded-full items-center select-none`}>
     <button onClick={() => paginate(currentPage - 1)} disabled={currentPage===1} className="p-2 px-4 rounded-full transition-colors ease-in-out active:bg-black"><BsArrowLeft/></button>
           <p className="min-w-4 text-center">{currentPage}</p>
-    <button onClick={() => paginate(currentPage + 1)} className="active:bg-black p-2 px-4 rounded-full transition-colors ease-in-out"><BsArrowRight/></button>
+    <button onClick={() => paginate(currentPage + 1)} disabled={currentPage === totalPages} className="active:bg-black p-2 px-4 rounded-full transition-colors ease-in-out"><BsArrowRight/></button>
   
     </section>
     </article>}  
