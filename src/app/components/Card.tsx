@@ -78,7 +78,7 @@ const CardCountry = () => {
     <div className={` ${theme === 'dark' ? 'bg-gray-800 text-white' : null} min-h-screen `}>
       <Input value={searchTerm} setSearchTerm={setSearchTerm} swapFilterCountries={handleFilter} filter={region} regions={regions} />
 
-      <div className="grid m-auto w-fit gap-20 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 py-7">
+      <div className="grid container m-auto w-fit gap-20 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 py-7">
         {loading && <p>Loading...</p>}
 
         {!loading && currentItems.map((item, index) => (
